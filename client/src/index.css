@@ -22,6 +22,29 @@ h1{
   color: orangered;
 }
 
+p{
+  margin: 50px !important;
+  text-align: left;
+  padding: 0;
+}
+
+.btn1{
+  box-shadow: none !important;
+  background-color: white !important;
+  color: orangered !important;
+  border: 1px solid orangered !important;
+  padding: 5px 15px !important;
+  outline: none !important;
+}
+
+.bt1:focus{
+  border: none;
+}
+
+button{
+  padding: 3px 10px !important;
+}
+
 .header{
   padding: 10px;
 }
