@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row , Col , From , Input} from 'antd'
+import {Row , Col , Form , Input} from 'antd'
 import {Link} from "react-router-dom"
 function Register() {
     return (
@@ -7,7 +7,7 @@ function Register() {
            <Row gutter={16} className='d=flex align-items-center'>
 
                <Col lg={16} style={{position :'relative'}}>
-                   <img src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'></img>
+                   <img alt="bicycle" src='https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'></img>
                    <h1 className='login-logo'>PEDALPAL</h1>
                </Col>
             
@@ -45,4 +45,4 @@ function Register() {
     )
 }
 
-export default Login
+export default Register
