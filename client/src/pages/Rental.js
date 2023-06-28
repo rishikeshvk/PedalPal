@@ -1,10 +1,11 @@
 import React from 'react'
+import DefaultLayout from '../components/DefaultLayout'
 
 function Rental() {
     return (
-        <div>
+        <DefaultLayout>
             <h1>Bicycle Rental</h1>
-        </div>
+        </DefaultLayout>
     )
 }
 
