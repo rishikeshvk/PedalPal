@@ -3,22 +3,26 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import DefaultLayout from "../components/DefaultLayout";
 import Spinner from "../components/Spinner";
-import { addBicycle, editBicycle, getAllBicycles } from "../redux/actions/bicycleActions";
+import { editBicycle, getAllBicycles } from "../redux/actions/bicycleActions";
+import { useParams } from "react-router-dom";
+
 function EditBicycle({ match }) {
   const { bicycles } = useSelector((state) => state.bicyclesReducer);
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.alertsReducer);
   const [bicycle, setbicycle] = useState();
   const [totalbicycles, settotalbicycles] = useState([]);
+  const { id } = useParams();
+
   useEffect(() => {
-    if (bicycles.length == 0) {
+    if (bicycles.length === 0) {
       dispatch(getAllBicycles());
     } else {
       settotalbicycles(bicycles);
-      setbicycle(bicycles.find((o) => o._id == match.params.bicycleid));
+      setbicycle(bicycles.find((o) => o._id === id));
       console.log(bicycle);
     }
-  }, [bicycles]);
+  }, [bicycles, bicycle, dispatch, id]);
 
   function onFinish(values) {
     values._id = bicycle._id;
@@ -64,15 +68,15 @@ function EditBicycle({ match }) {
                 <Input />
               </Form.Item>
               <Form.Item
-                name="capacity"
-                label="Capacity"
+                name="gear"
+                label="Gear"
                 rules={[{ required: true }]}
               >
                 <Input />
               </Form.Item>
               <Form.Item
-                name="fuelType"
-                label="Fuel Type"
+                name="type"
+                label="Type"
                 rules={[{ required: true }]}
               >
                 <Input />

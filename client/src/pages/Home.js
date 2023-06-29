@@ -87,7 +87,7 @@ function Home() {
                    {totalBicycles.map(bicycle=>{
                        return <Col lg={5} sm={24} xs={24}>
                             <div className="bicycle p-2 bs1">
-                               <img src={bicycle.image} className="carimg"/>
+                               <img src={bicycle.image} className="bicycleimg"/>
 
                                <div className="bicycle-content d-flex align-items-center justify-content-between">
 

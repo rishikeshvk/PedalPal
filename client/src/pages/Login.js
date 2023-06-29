@@ -5,7 +5,7 @@ import {useDispatch , useSelector} from 'react-redux'
 import { userLogin } from '../redux/actions/userActions'
 import AOS from 'aos';
 import Spinner from '../components/Spinner';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css'; 
 // ..
 AOS.init();
 function Login() {
