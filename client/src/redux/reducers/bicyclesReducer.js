@@ -2,7 +2,7 @@ const initialData = {
     bicycles: []
 }
 
-export function bicycleReducer(state = initialData, action) {
+export function bicyclesReducer(state = initialData, action) {
     switch (action.type) {
         case 'GET_ALL_BICYCLES': return {
                 ...state,

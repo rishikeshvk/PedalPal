@@ -1,16 +1,18 @@
 import { legacy_createStore as createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 import thunk from 'redux-thunk'; // Thunk middleware for Redux
-import { bicycleReducer } from './reducers/bicycleReducer';
+import { bicyclesReducer } from './reducers/bicyclesReducer';
 import { alertsReducer } from './reducers/alertsReducer';
+import { rentalsReducer } from './reducers/rentalsReducer';
 
 const composeEnhancers = composeWithDevTools({
   
 });
 
 const rootReducer = combineReducers({
-    bicycleReducer,
-    alertsReducer
+    bicyclesReducer,
+    alertsReducer,
+    rentalsReducer
 });
 
 const store = createStore(

@@ -6,11 +6,15 @@ import {message} from 'antd'
 export const userLogin=(reqObj)=>async dispatch=>{
     dispatch({ type: 'LOADING', payload: true });
     try {
-        const response = await axios.get('/api/users/login',reqObj)
+        const response = await axios.post('/api/users/login',reqObj)
         localStorage.setItem('user',JSON.stringify(response.data))
         message.success('Login Success')
 
         dispatch({ type: 'LOADING', payload: false })
+        setTimeout(() => {
+            window.location.href='/'
+         
+        }, 500);
     } catch (error) {
         console.log(error)
         message.error('Something went wrong')
@@ -19,14 +23,22 @@ export const userLogin=(reqObj)=>async dispatch=>{
 }
 
 export const userRegister=(reqObj)=>async dispatch=>{
-    dispatch({ type: 'LOADING', payload: true })
+    
+    dispatch({type: 'LOADING' , payload:true})
+
     try {
-        const response = await axios.get('/api/users/login',reqObj);
-        dispatch({ type: 'LOADING', payload: false })
-        message.success('Registration Successful')
+        const response = await axios.post('/api/users/register' , reqObj)
+        message.success('Registration successfull')
+        setTimeout(() => {
+            window.location.href='/login'
+         
+        }, 500);
+       
+        dispatch({type: 'LOADING' , payload:false})
+        
     } catch (error) {
         console.log(error)
         message.error('Something went wrong')
-        dispatch({ type: 'LOADING', payload: false })
+        dispatch({type: 'LOADING' , payload:false})
     }
 }
