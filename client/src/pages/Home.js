@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import DefaultLayout from '../components/DefaultLayout'
 import {useDispatch, useSelector} from 'react-redux'
 import {getAllBicycles} from '../redux/actions/bicycleActions'
-import { Col, Row , Divider , DatePicker, Checkbox} from 'antd'
+import { Col, Row , DatePicker} from 'antd'
 import {Link} from 'react-router-dom'
 import Spinner from '../components/Spinner';
 import moment from 'moment'
+import '../index.css'
+
 const {RangePicker} = DatePicker
 function Home() {
     const {bicycles} = useSelector(state => state.bicyclesReducer)
@@ -16,7 +18,7 @@ function Home() {
 
     useEffect(() => {
         dispatch(getAllBicycles())
-    }, [])
+    }, [dispatch])
 
     useEffect(() => {
 
@@ -34,7 +36,7 @@ function Home() {
 
         for(var bicycle of bicycles){
 
-              if(bicycle.bookedTimeSlots.length == 0){
+              if(bicycle.bookedTimeSlots.length === 0){
                   temp.push(bicycle)
               }
               else{
@@ -78,7 +80,7 @@ function Home() {
 
              </Row>
 
-              {loading == true && (<Spinner/>)}
+              {loading === true && (<Spinner/>)}
 
 
               
@@ -87,7 +89,7 @@ function Home() {
                    {totalBicycles.map(bicycle=>{
                        return <Col lg={5} sm={24} xs={24}>
                             <div className="bicycle p-2 bs1">
-                               <img src={bicycle.image} className="bicycleimg"/>
+                               <img alt="bicycle" src={bicycle.image} className="bicycleimg"/>
 
                                <div className="bicycle-content d-flex align-items-center justify-content-between">
 

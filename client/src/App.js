@@ -1,15 +1,16 @@
+//import 'antd/dist/reset.css';
 import './App.css'
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import RentalBicycle from './pages/RentalBicycle'
-import 'antd/dist/reset.css';
 import UserRentals from './pages/UserRentals'
 import AddBicycle from './pages/AddBicycle'
 import EditBicycle from './pages/EditBicycle'
 import AdminHome from './pages/AdminHome'
 import { ProtectedRoute } from './ProtectedRoute'
+
 
 function App() {
   return (

@@ -27,6 +27,10 @@ router.post('/editbicycle', async (req, res) => {
     try {
         const bicycle = await Bicycle.findOne({ _id: req.body._id });
         bicycle.name = req.body.name;
+        bicycle.image = req.body.image;
+        bicycle.type = req.body.type;
+        bicycle.gear = req.body.gear;
+        bicycle.rentPerHour = req.body.rentPerHour;
         
         await bicycle.save();
 
