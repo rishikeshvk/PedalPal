@@ -4,7 +4,7 @@ export const rentBicycle = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-     await axios.post("/api/rentals/bookbicycle" , reqObj);
+    await axios.post("/api/rentals/rentbicycle" , reqObj);
 
     dispatch({ type: "LOADING", payload: false });
     message.success("Your bicycle booked successfully");

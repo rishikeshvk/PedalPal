@@ -3,9 +3,9 @@ const router = express.Router();
 const Rental = require('../models/rentalModel');
 const Bicycle = require('../models/bicycleModel');
 const { v4: uuidv4 } = require('uuid');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')("sk_test_51NOHzjSFdHuJ3OrQOZjdpBypECTru6QtWwceEm8vG6l08tWYpnV2Okub73pMZcXxBlcyGxjx50hONiTEsaJAfdEj00rQfxFehk");
 
-router.post('/rentBicycle', async (req, res) => {
+router.post('/rentbicycle', async (req, res) => {
     const { token } = req.body;
     try {
         const customer = await stripe.customers.create({
@@ -31,7 +31,7 @@ router.post('/rentBicycle', async (req, res) => {
             bicycle.bookedTimeSlots.push(req.body.bookedTimeSlots);
 
             await bicycle.save();
-            res.send({ message: 'Bicycle Booked Successfully' });
+            res.send({ message: 'Your booking is successfull' });
         } else {
             res.send({ message: 'Payment Failed' });
         }

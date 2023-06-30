@@ -27,7 +27,7 @@ function Register() {
            data-aos='slide-left'
            data-aos-duration='1500'
           src="https://askproject.net/venturo/wp-content/uploads/sites/84/2022/06/josh-nuttall-eTrHMJwI5ro-unsplash.jpg" />
-          <h1 className="login-logo">PEDALPAL</h1>
+          {/* <h1 className="login-logo">PEDALPAL</h1> */}
         </Col>
         <Col lg={8} className="text-left p-5">
           <Form layout="vertical" className="login-form p-5" onFinish={onFinish}>
