@@ -3,14 +3,14 @@
 
 This is a readme file for the Bicycle Rental System, a web application implemented using the MERN stack (MongoDB, Express.js, React.js, Node.js). The system allows users to rent bicycles online and provides an interface for managing rentals and inventory.
 
-### Team Members
+## Team Members
 
 * [Anusree K]
 * [Anagha K S]
 * [Rishikesh V K]
 * [Melvin T K]
 
-### Features
+## Features
 
 The Bicycle Rental System provides the following features:
 
@@ -22,7 +22,7 @@ The Bicycle Rental System provides the following features:
 - View rental history and details
 - Responsive design for desktop and mobile devices
 
-### Technologies
+## Technologies
 
 The system is implemented using the following technologies:
 
@@ -34,7 +34,7 @@ The system is implemented using the following technologies:
 - Bootstrap: A CSS framework used for responsive and mobile-first web development.
 - Axios: A promise-based HTTP client for making API requests.
 
-### Installation
+## Installation
 
 To install and run the Bicycle Rental System locally, follow these steps:
 
@@ -65,16 +65,16 @@ To install and run the Bicycle Rental System locally, follow these steps:
     ```
 6. Open http://localhost:3000 in your browser
 
-### Screenshots
+## Screenshots
 
-### Usage
+## Usage
 
 - Register a new user account or login with an existing account.
 - Browse the available bicycles and select a bicycle to rent.
 - Choose the rental duration and confirm the rental.
 - View the rental details and history in the user profile.
 
-### API Endpoints
+## API Endpoints
 
 The following are the main API endpoints used in the Bicycle Rental System:
 
@@ -87,6 +87,6 @@ The following are the main API endpoints used in the Bicycle Rental System:
 - /api/rentbicycle: POST request to rent a bicycle
 - /api/getallrentals: GET request to get all rentals
 
-### License
+## License
 
 The Bicycle Rental System is open-source software licensed under the [MIT License](LICENSE).
